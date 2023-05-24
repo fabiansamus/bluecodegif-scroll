@@ -1,6 +1,6 @@
 <%- include('header'); -%>
     
-<div class="box" id="heading">
+<div class="box heading">
     <h1><%= listTitle %></h1>
 </div>
 
@@ -12,10 +12,10 @@
 </div>
 
 <div id="card-container" class="box">
-    <ul id="myList" class="myList-class">
+    <ul id="myList" class="">
         <% for (const gif of listOfGifs) { %>
-            <li>
-                <div class="box" id="heading"><h3><%= gif.title %></h3></div>
+            <li class="">
+                <div class="box heading"><h1><%= gif.title %></h1></div>
                 <img src="<%= gif.url %>" alt="GIF" style="height:<%= gif.fixed_height %>; width:<%= gif.fixed_width %>">
             </li>
         <% } %>
