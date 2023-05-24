@@ -32,29 +32,29 @@ module.exports.trending= function(){
       return parsedInfo;
     })
 }
-module.exports.search= function(keyword){
-    return fetch(url=`&q=${keyword}`)
-    .then(response => response.json())
-    .then(data => {
-      const parsedInfo = [];
+// module.exports.search= function(keyword){
+//     return fetch(url=`&q=${keyword}`)
+//     .then(response => response.json())
+//     .then(data => {
+//       const parsedInfo = [];
 
-      for (const gif of data.data) {
-        const title = gif.title;
-        const url = gif.images.fixed_height.url;
-        const fixed_height = gif.images.fixed_height.height;
-        const fixed_width = gif.images.fixed_height.width;
+//       for (const gif of data.data) {
+//         const title = gif.title;
+//         const url = gif.images.fixed_height.url;
+//         const fixed_height = gif.images.fixed_height.height;
+//         const fixed_width = gif.images.fixed_height.width;
 
-        const gifInfo = {
-          title: title,
-          url: url,
-          fixed_height: fixed_height,
-          fixed_width: fixed_width
-        };
+//         const gifInfo = {
+//           title: title,
+//           url: url,
+//           fixed_height: fixed_height,
+//           fixed_width: fixed_width
+//         };
 
-        parsedInfo.push(gifInfo);
-      }
+//         parsedInfo.push(gifInfo);
+//       }
 
-      return parsedInfo;
-    })
-  }
+//       return parsedInfo;
+//     })
+//   }
   
