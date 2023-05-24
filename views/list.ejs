@@ -14,9 +14,9 @@
 <div id="card-container" class="box">
     <ul id="myList" class="">
         <% for (const gif of listOfGifs) { %>
-            <li class="">
+            <li class="object">
                 <div class="box heading"><h1><%= gif.title %></h1></div>
-                <img src="<%= gif.url %>" alt="GIF" style="height:<%= gif.fixed_height %>; width:<%= gif.fixed_width %>">
+                <img src="<%= gif.url %>" alt="GIF" >
             </li>
         <% } %>
     </ul>
@@ -54,9 +54,9 @@
 
                 for (const gif of data.data) {
                     const title = gif.title;
-                    const url = gif.images.fixed_height.url;
-                    const fixed_height = gif.images.fixed_height.height;
-                    const fixed_width = gif.images.fixed_height.width;
+                    const url = gif.images.original.url;
+                    const fixed_height = gif.images.original.height;
+                    const fixed_width = gif.images.original.width;
 
                     const gifInfo = {
                         title: title,
@@ -70,7 +70,7 @@
 
                 const myList = document.getElementById('myList');
                 for (const element of parsedInfo) {
-                    const listItem = `<li><div class="box" id="heading"><h3>${element.title}</h3></div><img src="${element.url}" alt="GIF" style="height:${element.fixed_height}; width:${element.fixed_width}"></li>`;
+                    const listItem = `<li class="contain"><div class="box heading"><h3>${element.title}</h3></div><img src="${element.url}" alt="GIF" ></li>`;
                     myList.innerHTML += listItem;
                 }
 
