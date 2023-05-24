@@ -13,11 +13,14 @@ h1 {
 }
 
 .box {
-  max-width: 400px;
-  margin: 50px auto;
+  max-width: 480px;
+  margin: auto;
   background: white;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+.contain img {
+  object-fit: contain;
 }
 
 .heading {
